@@ -1,4 +1,8 @@
 # Restaurant_Rating_Prediction
+
+![eazytrendz_2723_trend20200219060910](https://user-images.githubusercontent.com/82859280/149061502-e3bf6807-84c8-4c5b-b8df-89e301bca4cf.jpg)
+
+
 About Using zomato bangalore data to predict restaurant rating in machine learning, and deploy
 Predicting Restaurant Ratings using Machine Learning Algorithms
 
