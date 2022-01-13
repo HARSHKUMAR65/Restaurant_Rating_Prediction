@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>zomato_resturent_rating</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+
+<img src=
+"https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/news14109.jpg"
+         alt="zomato image", width="00", height="150", style="float:left">
+
+<img src="https://www.collinsdictionary.com/images/full/restaurant_135621509.jpg"
+         alt="zomato image", width="00", height="150", style="float:right">
+
+<style>
+body {
+  background-image: url("https://www.collinsdictionary.com/images/full/restaurant_135621509.jpg");
+  background-position: 10%;
+  background-size: cover;
+}
+</style>
+
+
+
+ <div class="login">
+	<h1>Predict Zomato Restaurant Ratings</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="onliine_order" placeholder="Order Online" required="required" />
+        <input type="text" name="book_table" placeholder="Book Table" required="required" />
+		<input type="text" name="votes" placeholder="Votes" required="required" />
+        <input type="text" name="location" placeholder="Location" required="required" />
+        <input type="text" name="rest_type" placeholder="Restaurant Type" required="required" />
+        <input type="text" name="cuisines" placeholder="Cuisines" required="required" />
+        <input type="text" name="cost" placeholder="Cost" required="required" />
+        <input type="text" name="type" placeholder="type" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
